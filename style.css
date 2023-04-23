@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-style: none;
+}
+
+body {
+    font-family: 'Forum', sans-serif;
+    background-color: rgb(35, 35, 46);
+    color: #fff;
+    height: 100vh;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+hr {
+    width: 360px;
+    color: #fff;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.board {
+    width: 360px;
+    height: 360px;
+    background-color: rgb(37, 37, 56);
+    /* border-radius: 8px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} 
+.tile {
+    /* box-sizing: border-box; */
+    min-width: 38px;
+    min-height: 38px;
+    font-size: 1.1rem;
+    border: 1px solid rgb(49, 54, 80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.set-tile {
+    background-color: rgb(33, 33, 49);
+}
+
+[data-row = '2'], [data-row = '5'] {
+    border-bottom: 1px solid #717171;
+}
+[data-column = '2'], [data-column = '5'] {
+    border-right: 1px solid #717171;
+} 
+
+.block3x3 {
+   border: 1px solid #000; 
+}
+
+.util {
+    width: 270px;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.eraser, .reset {
+    cursor: pointer;
+}
+
+.numbers {
+    width: 360px;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.number {
+    min-width: 34px;
+    min-height: 34px;
+    margin: 2px;
+    background-color: rgb(37, 37, 56);
+    font-size: 1.1rem;
+    border: 1px solid #313650;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.active {
+    background-color: rgb(65, 69, 89);
+}
+.equal_tiles {
+    background-color: rgb(20, 23, 36);
+}
+
+.wrongNum, #errors {
+    color: #c43636;
+}
